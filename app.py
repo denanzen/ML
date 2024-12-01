@@ -5,7 +5,7 @@ import joblib
 import numpy as np
 import logging
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 CORS(app)  # Mengaktifkan CORS
 
 # Konfigurasi database
