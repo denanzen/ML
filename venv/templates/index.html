@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ForestMinds</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="icon" href="{{ url_for('static', filename='assets/images/silvasuphaa.png') }}" type="image/png">
+
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}"> 
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-abs-1.png" media="min-width(768px)">
+  <link rel="preload" as="image" href="./assets/images/hero-abs-2.png" media="min-width(768px)">
+
+</head>
+
+<body id="top">
+<div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+      
+      <section class="hero" id="home" aria-label="hero" style="background-image: url('{{ url_for('static', filename='assets/css/bg.jpg') }}')">
+
+      <div class="container">
+
+    <div class="hero-content-a">
+
+      <h1 class="section-substitle">SELAMAT DATANG</h1>
+
+      <h2 class="h2-hero-title">Marilah Kita Prediksi Kesehatan Hutan Kita!</h2>
+
+      <p class="hero-text-a">
+        Klik dibawah ini untuk masuk dan mulai memprediksi kesehatan hutan kita!
+      </p>
+
+      <a href="{{ url_for('utama') }}" class="btn btn-primary-a">
+      <ion-icon name="arrow-back-outline" aria-hidden="true"></ion-icon>
+        <span class="span">Mulai Sekarang</span>
+      </a>
+
+      
+    </div>
+
+    <a href="{{ url_for('awal') }}" class="hero-banner-link">
+  <figure class="hero-banner-a">
+    <img src="{{ url_for('static', filename='assets/images/silvasuphaa.png') }}" width="360" height="360" loading="lazy" alt="hero image" class="w-100-1">
+  </figure>
+</a>
+
+
+  </div>
+  
+</section>
+</div>
+     <!-- 
+        - #COURSE
+      -->
+
+<!-- 
+  - #FOOTER
+-->
+
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-top text-center">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logobottom">ForestMinds</a>
+
+        <p class="section-text">
+        ForestMinds adalah sebuah langkah awal menuju dunia yang hijau.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-discord"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom text-center">
+      <p class="copyright">
+        Copyright 2024 ForestMinds. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="arrow-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+  <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+    </script>
+</body>
+
+</html>
