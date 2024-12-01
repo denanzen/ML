@@ -38,19 +38,19 @@ with app.app_context():
 
 @app.route('/')
 def awal():
-    return render_template('awal.php')
+    return render_template('awal.html')
 
 @app.route('/index')
 def index():
-    return render_template('index.php')
+    return render_template('index.html')
 
 @app.route('/beranda')
 def beranda():
-    return render_template('beranda.php')
+    return render_template('beranda.html')
 
 @app.route('/utama')
 def utama():
-    return render_template('utama.php')
+    return render_template('utama.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
